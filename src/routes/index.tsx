@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createHashRouter, Navigate } from 'react-router-dom';
 import type { RouteObject } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import UserManagement from '../pages/Permission/UserManagement';
@@ -39,6 +39,6 @@ const routes: RouteObject[] = [
   },
 ];
 
-const router = createBrowserRouter(routes);
+const router = createHashRouter(routes);
 
 export default router;
