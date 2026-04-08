@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Layout, Menu, theme, Typography } from 'antd';
-import { UserOutlined, TeamOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ShoppingOutlined, IdcardOutlined, OrderedListOutlined } from '@ant-design/icons';
+import { UserOutlined, TeamOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ShoppingOutlined, IdcardOutlined, OrderedListOutlined, FilePptOutlined } from '@ant-design/icons';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
@@ -54,6 +54,21 @@ const MainLayout: React.FC = () => {
               key: '/order',
               icon: <OrderedListOutlined />,
               label: '訂單管理',
+            },
+            {
+              key: 'content',
+              icon: <FilePptOutlined />,
+              label: '內容管理',
+              children: [
+                {
+                  key: '/content/banners',
+                  label: 'Banner 管理',
+                },
+                {
+                  key: '/content/faq',
+                  label: 'FAQ 管理',
+                },
+              ]
             },
           ]}
         />

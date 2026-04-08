@@ -6,6 +6,8 @@ import RoleManagement from '../pages/Permission/RoleManagement';
 import ProductManagement from '../pages/Product/ProductManagement';
 import MemberManagement from '../pages/Member/MemberManagement';
 import OrderManagement from '../pages/Order/OrderManagement';
+import BannerManagement from '../pages/Content/BannerManagement';
+import FAQManagement from '../pages/Content/FAQManagement';
 
 
 const routes: RouteObject[] = [
@@ -36,6 +38,14 @@ const routes: RouteObject[] = [
       {
         path: 'order',
         element: <OrderManagement />,
+      },
+      {
+        path: 'content/banners',
+        element: <BannerManagement />,
+      },
+      {
+        path: 'content/faq',
+        element: <FAQManagement />,
       },
       {
         path: '*',
