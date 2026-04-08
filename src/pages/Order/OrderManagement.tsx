@@ -147,21 +147,21 @@ const OrderManagement: React.FC = () => {
       key: 'id',
     },
     {
-      title: '買家帳號',
-      dataIndex: 'buyerEmail',
-      key: 'buyerEmail',
+      title: '訂單狀態',
+      dataIndex: 'status',
+      key: 'status',
+      render: (status: OrderStatus) => getStatusTag(status),
+    },
+    {
+      title: '買家名稱',
+      dataIndex: 'buyerName',
+      key: 'buyerName',
     },
     {
       title: '訂單總計',
       dataIndex: 'totalAmount',
       key: 'totalAmount',
       render: (amount: number) => `NT$ ${amount.toLocaleString()}`,
-    },
-    {
-      title: '訂單狀態',
-      dataIndex: 'status',
-      key: 'status',
-      render: (status: OrderStatus) => getStatusTag(status),
     },
   ];
 

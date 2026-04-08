@@ -14,7 +14,7 @@ export interface Order {
   key: string;
   id: string; // TBA250310001
   date: string; // YYYY-MM-DD
-  buyerEmail: string;
+  buyerName: string;
   totalAmount: number;
   status: OrderStatus;
   shippingInfo: {
@@ -35,7 +35,7 @@ export const initialOrders: Order[] = [
     key: '1',
     id: 'TBA250310001',
     date: '2025-03-10',
-    buyerEmail: 'consumer@example.com',
+    buyerName: '王小明',
     totalAmount: 350,
     status: 'PENDING',
     shippingInfo: {
@@ -63,7 +63,7 @@ export const initialOrders: Order[] = [
     key: '2',
     id: 'TBA250311002',
     date: '2025-03-11',
-    buyerEmail: 'neon.lover@test.site',
+    buyerName: '李阿亮',
     totalAmount: 1760,
     status: 'PROCESSING',
     shippingInfo: {
@@ -91,7 +91,7 @@ export const initialOrders: Order[] = [
     key: '3',
     id: 'TBA250312003',
     date: '2025-03-12',
-    buyerEmail: 'alice.chen@corp.com',
+    buyerName: '陳愛麗',
     totalAmount: 650,
     status: 'SHIPPED',
     shippingInfo: {
@@ -120,7 +120,7 @@ export const initialOrders: Order[] = [
     key: '4',
     id: 'TBA250313004',
     date: '2025-03-13',
-    buyerEmail: 'old.user@yahoo.tw',
+    buyerName: '張大千',
     totalAmount: 1160,
     status: 'CANCELLED',
     shippingInfo: {
@@ -148,7 +148,7 @@ export const initialOrders: Order[] = [
     key: '5',
     id: 'TBA250314005',
     date: '2025-03-14',
-    buyerEmail: 'bulk.buyer@mega.com',
+    buyerName: '大採購家',
     totalAmount: 4350,
     status: 'PENDING',
     shippingInfo: {
