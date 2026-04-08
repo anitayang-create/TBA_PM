@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Layout, Menu, theme, Typography } from 'antd';
-import { UserOutlined, TeamOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ShoppingOutlined, IdcardOutlined } from '@ant-design/icons';
+import { UserOutlined, TeamOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ShoppingOutlined, IdcardOutlined, OrderedListOutlined } from '@ant-design/icons';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
@@ -49,6 +49,11 @@ const MainLayout: React.FC = () => {
               key: '/member',
               icon: <IdcardOutlined />,
               label: '會員管理',
+            },
+            {
+              key: '/order',
+              icon: <OrderedListOutlined />,
+              label: '訂單管理',
             },
           ]}
         />

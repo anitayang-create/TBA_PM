@@ -5,6 +5,8 @@ import UserManagement from '../pages/Permission/UserManagement';
 import RoleManagement from '../pages/Permission/RoleManagement';
 import ProductManagement from '../pages/Product/ProductManagement';
 import MemberManagement from '../pages/Member/MemberManagement';
+import OrderManagement from '../pages/Order/OrderManagement';
+
 
 const routes: RouteObject[] = [
   {
@@ -30,6 +32,10 @@ const routes: RouteObject[] = [
       {
         path: 'member',
         element: <MemberManagement />,
+      },
+      {
+        path: 'order',
+        element: <OrderManagement />,
       },
       {
         path: '*',
