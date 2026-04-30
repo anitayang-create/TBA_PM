@@ -8,6 +8,7 @@ import MemberManagement from '../pages/Member/MemberManagement';
 import OrderManagement from '../pages/Order/OrderManagement';
 import BannerManagement from '../pages/Content/BannerManagement';
 import FAQManagement from '../pages/Content/FAQManagement';
+import AuditLog from '../pages/System/AuditLog';
 
 
 const routes: RouteObject[] = [
@@ -46,6 +47,10 @@ const routes: RouteObject[] = [
       {
         path: 'content/faq',
         element: <FAQManagement />,
+      },
+      {
+        path: 'system/audit-log',
+        element: <AuditLog />,
       },
       {
         path: '*',

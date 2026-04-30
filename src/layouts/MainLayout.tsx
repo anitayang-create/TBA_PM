@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Layout, Menu, theme, Typography } from 'antd';
-import { UserOutlined, TeamOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ShoppingOutlined, IdcardOutlined, OrderedListOutlined, FilePptOutlined } from '@ant-design/icons';
+import { UserOutlined, TeamOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ShoppingOutlined, IdcardOutlined, OrderedListOutlined, FilePptOutlined, SettingOutlined } from '@ant-design/icons';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
@@ -67,6 +67,17 @@ const MainLayout: React.FC = () => {
                 {
                   key: '/content/faq',
                   label: 'FAQ 管理',
+                },
+              ]
+            },
+            {
+              key: 'system',
+              icon: <SettingOutlined />,
+              label: '系統管理',
+              children: [
+                {
+                  key: '/system/audit-log',
+                  label: '操作紀錄',
                 },
               ]
             },
