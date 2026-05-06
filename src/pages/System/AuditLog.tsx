@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Table, Typography, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
-import { AuditLog } from '../../models/system';
+import type { AuditLog } from '../../models/system';
 
 const { Title } = Typography;
 
