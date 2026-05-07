@@ -39,16 +39,11 @@ const Login: React.FC = () => {
         >
           <Form.Item
             name="username"
-            rules={[{ required: true, message: '請輸入帳號！' }]}
           >
             <Input prefix={<UserOutlined />} placeholder="帳號" />
           </Form.Item>
           <Form.Item
             name="password"
-            rules={[
-              { required: true, message: '請輸入密碼！' },
-              { min: 6, message: '密碼長度至少為 6 個字元' }
-            ]}
           >
             <Input.Password
               prefix={<LockOutlined />}
