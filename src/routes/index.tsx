@@ -9,6 +9,7 @@ import OrderManagement from '../pages/Order/OrderManagement';
 import BannerManagement from '../pages/Content/BannerManagement';
 import FAQManagement from '../pages/Content/FAQManagement';
 import AuditLog from '../pages/System/AuditLog';
+import SystemSettings from '../pages/System/SystemSettings';
 import Login from '../pages/Auth/Login';
 
 const routes: RouteObject[] = [
@@ -55,6 +56,10 @@ const routes: RouteObject[] = [
       {
         path: 'system/audit-log',
         element: <AuditLog />,
+      },
+      {
+        path: 'system/settings',
+        element: <SystemSettings />,
       },
       {
         path: '*',

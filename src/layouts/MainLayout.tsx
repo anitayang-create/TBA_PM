@@ -95,6 +95,10 @@ const MainLayout: React.FC = () => {
                   key: '/system/audit-log',
                   label: '操作紀錄',
                 },
+                {
+                  key: '/system/settings',
+                  label: '系統設定',
+                },
               ]
             },
           ]}
