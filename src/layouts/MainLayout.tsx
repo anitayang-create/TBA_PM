@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Layout, Menu, theme, Typography } from 'antd';
-import { UserOutlined, TeamOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ShoppingOutlined, IdcardOutlined, OrderedListOutlined, FilePptOutlined, SettingOutlined } from '@ant-design/icons';
+import { Layout, Menu, theme, Typography, Avatar, Dropdown, message } from 'antd';
+import type { MenuProps } from 'antd';
+import { UserOutlined, TeamOutlined, MenuFoldOutlined, MenuUnfoldOutlined, ShoppingOutlined, IdcardOutlined, OrderedListOutlined, FilePptOutlined, SettingOutlined, LogoutOutlined } from '@ant-design/icons';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
@@ -13,6 +14,21 @@ const MainLayout: React.FC = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const handleLogout = () => {
+    // 實務上這裡會清除 localStorage/cookie 中的 token
+    message.success('已成功登出');
+    navigate('/login');
+  };
+
+  const userMenuItems: MenuProps['items'] = [
+    {
+      key: 'logout',
+      icon: <LogoutOutlined />,
+      label: '登出',
+      onClick: handleLogout,
+    },
+  ];
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -85,12 +101,20 @@ const MainLayout: React.FC = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer, display: 'flex', alignItems: 'center' }}>
+        <Header style={{ padding: 0, background: colorBgContainer, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div
             style={{ padding: '0 24px', cursor: 'pointer', fontSize: '18px' }}
             onClick={() => setCollapsed(!collapsed)}
           >
             {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+          </div>
+          <div style={{ padding: '0 24px' }}>
+            <Dropdown menu={{ items: userMenuItems }} placement="bottomRight" arrow>
+              <div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Avatar icon={<UserOutlined />} style={{ backgroundColor: '#1677ff' }} />
+                <span>管理員</span>
+              </div>
+            </Dropdown>
           </div>
         </Header>
         <Content
