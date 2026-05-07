@@ -10,7 +10,7 @@ const Login: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const onFinish = (values: any) => {
+  const onFinish = (_values: any) => {
     setLoading(true);
     // Simulate API call
     setTimeout(() => {
