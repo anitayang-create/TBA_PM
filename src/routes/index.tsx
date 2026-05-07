@@ -9,9 +9,13 @@ import OrderManagement from '../pages/Order/OrderManagement';
 import BannerManagement from '../pages/Content/BannerManagement';
 import FAQManagement from '../pages/Content/FAQManagement';
 import AuditLog from '../pages/System/AuditLog';
-
+import Login from '../pages/Auth/Login';
 
 const routes: RouteObject[] = [
+  {
+    path: '/login',
+    element: <Login />,
+  },
   {
     path: '/',
     element: <MainLayout />,
